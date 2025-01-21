@@ -1,0 +1,76 @@
+<div class="header">
+<div class="main">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home"> <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+          alt="SummitTickets Logo" width="30" height="30" class="d-inline-block align-top">
+        SummitTickets
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          </li>
+
+     <!-- Eventos -->
+<li class="nav-item" *ngIf="sesion">
+  <a class="nav-link" href="/evento">Eventos</a>
+</li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contacto</a>
+          </li>
+        </ul>
+
+
+        <!--tienda -->
+
+        <div class="text-center text-lg-start mt-0 pt-1 button-container">
+          <button type="button" class="btn btn-light btn-lg" (click)="irALogin()"><svg
+              xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-shop-window"
+              viewBox="0 0 16 16">
+              <path
+                d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
+            </svg> 
+          </button>
+        </div>
+        
+
+        <!-- Formulario de inicio de sesión (login) -->
+        <div class="text-center text-lg-start mt-0 pt-1 button-container2" *ngIf="!sesion">
+          <button type="button" class="btn btn-light btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;"
+            [routerLink]="['/usuarios']">Login</button>
+        </div>
+
+        <!-- Botón de nombre de usuario (mostrado cuando se inicia sesión) -->
+        <div class="text-center text-lg-start mt-0 pt-1 button-container2" *ngIf="sesion">
+          <div class="dropdown">
+            <button class="btn btn-light btn-lg dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z"/>
+              </svg>
+              {{ usuario.nombre }}
+            </button>
+            
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              
+              <button type="button" class="dropdown-item text-center" (click)="cerrarSesion()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-closed-fill" viewBox="0 0 16 16">
+                  <path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                </svg>Cerrar Sesión</button>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+</div>
+</div>
