@@ -12,7 +12,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { UsuarioService } from './usuarios/usuario.service';
-import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -22,7 +21,6 @@ const routes: Routes= [
   {path: 'evento', component: EventoComponent},
   {path: 'pedido', component: PedidosComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'contact', component: ContactComponent},
 
 ];
 
@@ -36,7 +34,6 @@ const routes: Routes= [
     EventoComponent,
     PedidosComponent,
     HomeComponent,
-    ContactComponent,
 
   ],
   imports: [

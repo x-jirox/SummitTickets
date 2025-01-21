@@ -1,24 +1,23 @@
 <body>
   <div class="container">
     <!-- Contenido de tu página va aquí -->
-    <img class="logo" src="assets/img/lotus.webp"
-    style="width: 250px;" alt="logo">
+    <img class="logo" src="assets/img/lotus.webp" style="width: 250px;" alt="logo">
     <h1>Eventos disponibles en SummitTickets </h1>
-</div>
+  </div>
 
-<div class="card-container">
-  <div class="card" style="width: 20rem;" *ngFor="let evento of eventos">
-    <img [src]="evento.imagen" class="card-img-top" alt="evento image">
-    <div class="card-body">
-      <p class="card-date">{{ evento.fecha }} | {{ evento.ubicacion }}</p>
-      <h5 class="card-name">{{ evento.nombre }}</h5>
-      <h5 class="card-desc">{{ evento.descripcion }}</h5>
-    
-      <div class="card-footer">
-        <p class="card-price">{{ evento.precio}} $</p>
-        <a class="btn btn-secondary" (click)="agregarCarrito(evento)">Agregar al Carrito</a>
+  <div class="card-container">
+    <div class="card" style="width: 20rem;" *ngFor="let evento of eventos">
+      <img [src]="evento.imagen" class="card-img-top" alt="evento image">
+      <div class="card-body">
+        <p class="card-date">{{ evento.fecha }} | {{ evento.ubicacion }}</p>
+        <h5 class="card-name">{{ evento.nombre }}</h5>
+        <h5 class="card-desc">{{ evento.descripcion }}</h5>
+
+        <div class="card-footer">
+          <p class="card-price">{{ evento.precio}} $</p>
+          <a class="btn btn-secondary" (click)="agregarCarrito(evento)">Agregar al Carrito</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </body>

@@ -1,13 +1,13 @@
+.header {
+  z-index: 1000;
+  /* Coloca el header por encima del contenido */
+  position: fixed;
+  width: 100%;
+  /* Asegura que ocupe todo el ancho disponible */
+}
 
-  .header {
-    z-index: 1000;
-    /* Coloca el header por encima del contenido */
-    position: fixed;
-    width: 100%;
-    /* Asegura que ocupe todo el ancho disponible */
-  }
-.main{
- 
+.main {
+
 
   background: #00000075;
   margin: 0 auto;
@@ -20,21 +20,29 @@
   background-color: transparent !important;
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
   color: white !important;
   font-weight: bold;
 }
 
-.button-container{
+.button-container {
   margin-right: 10px;
 }
-.button-container2{
+
+.button-container2 {
   margin-right: 50px;
 }
 
 /* CSS personalizado para cambiar el color de fondo del botón de cerrar sesión cuando esté activo */
 .dropdown-item:active {
   color: black;
-  background-color: white; /* Cambiar el color de fondo a transparente */
+  background-color: white;
+  /* Cambiar el color de fondo a transparente */
 }
 
+
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}

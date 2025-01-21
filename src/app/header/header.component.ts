@@ -11,7 +11,9 @@ import Swal from 'sweetalert2'; // Importa SweetAlert2
 export class HeaderComponent implements OnInit {
   usuario!: Usuario;
   sesion: boolean = false;
-  mostrarMenu: boolean = false;
+  totalProductos: number = 0;
+
+
 
   constructor(private router: Router) { }
 
@@ -29,14 +31,21 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  toggleMenu() {
-    this.mostrarMenu = !this.mostrarMenu;
-  }
-
   cerrarSesion() {
     localStorage.removeItem('sesion');
     this.sesion = false;
-    this.mostrarMenu = false;
+
+    // Muestra una alerta de sesión finalizada
+    Swal.fire({
+      icon: 'success',
+      title: 'Sesión finalizada',
+      text: 'Has cerrado sesión correctamente.',
+      timer: 1000, // La alerta se cierra automáticamente después de 2 segundos
+      showConfirmButton: false,
+    });
+
+    // Redirige al usuario al inicio (opcional, ajusta la ruta según tu lógica)
+    this.router.navigate(['/usuarios']);
   }
 
   irALogin() {

@@ -8,18 +8,18 @@ import { Evento } from '../evento/evento';
   styleUrls: ['./pedidos.component.css'],
 })
 export class PedidosComponent implements OnInit {
-  constructor(private eventoService: EventoService) {}
+  constructor(private eventoService: EventoService) { }
   ngOnInit(): void {
     console.log(this.eventoService.getCarrito());
   }
 
   getCarrito(): Evento[] {
-   return this.eventoService.getCarrito();
+    return this.eventoService.getCarrito();
   }
 
-  eliminarCarrito(id:string){
+  eliminarCarrito(id: string) {
     this.eventoService.eliminarCarrito(id)
   }
 
-  
+
 }

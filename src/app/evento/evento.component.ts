@@ -11,14 +11,31 @@ import Swal from 'sweetalert2';
 export class EventoComponent implements OnInit {
   eventos: Evento[] = [];
 
-  constructor(private eventoService: EventoService) {}
+  constructor(private eventoService: EventoService) { }
 
   ngOnInit() {
     this.eventoService.getEventos().subscribe((eventos) => (this.eventos = eventos));
   }
 
   agregarCarrito(evento: Evento) {
-    this.eventoService.addCarrito(evento);
-    Swal.fire('¡Agregado al Carrito!');
+    const sesion = localStorage.getItem('sesion');
+    if (sesion) {
+      this.eventoService.addCarrito(evento);
+      Swal.fire('¡Agregado al Carrito!', '', 'success');
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Inicia sesión',
+        text: 'Debes iniciar sesión para agregar al carrito.',
+        showCancelButton: true,
+        confirmButtonText: 'Iniciar sesión',
+        cancelButtonText: 'Cancelar',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Redirigir al formulario de inicio de sesión
+          window.location.href = '/usuarios'; // Ajusta la ruta según tu configuración
+        }
+      });
+    }
   }
 }

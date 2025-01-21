@@ -5,12 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
   ngOnInit() {
     // Asegúrate de que el video esté sin sonido
     const video = document.getElementById('bg-video') as HTMLVideoElement;
     if (video) {
       video.muted = true;  // Mutea el video
     }
-}
+  }
 }

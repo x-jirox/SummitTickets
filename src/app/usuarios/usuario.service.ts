@@ -11,20 +11,20 @@ export class UsuarioService {
     {
       id_usuario: '1',
       nombre: 'John Doe',
-      correo: 'example2025@gmail.com',
+      correo: 'example2025-gmail.com',
       password: '12345',
       telefono: '1234567890',
     },
     {
       id_usuario: '2',
       nombre: 'Jane Smith',
-      correo: 'jane.smith@example.com',
+      correo: 'jane.smith-example.com',
       password: 'password123',
       telefono: '0987654321',
     },
   ];
 
-  constructor() {}
+  constructor() { }
 
   // Simula guardar un usuario (actualmente solo añade a la lista)
   guardarUsuario(usuario: Usuario): Observable<Usuario> {

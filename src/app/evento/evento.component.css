@@ -1,18 +1,17 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
 
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    justify-content: center; 
-  
-  }
+}
 
-.btn{
+.btn {
   text-decoration: none;
   color: #ffffff;
   /* Color del texto */
   height: 50px;
-margin-top: 1px;
+  margin-top: 1px;
   /* Padding en los enlaces */
   border-radius: 50px;
   /* Bordes redondeados */
@@ -31,7 +30,7 @@ margin-top: 1px;
   /* Darker background on hover */
 }
 
-.card-price{
+.card-price {
   text-decoration: none;
   color: #000000;
   /* Color del texto */
@@ -50,17 +49,18 @@ margin-top: 1px;
 
 
 .card {
-  
-  margin-right: 20px; /* Ajusta según sea necesario o elimina si no quieres espacio entre tarjetas */
+
+  margin-right: 20px;
+  /* Ajusta según sea necesario o elimina si no quieres espacio entre tarjetas */
   margin-bottom: 50px;
 }
 
-.card-date{
-    color: green;
+.card-date {
+  color: green;
 }
 
 
-.card-desc{
+.card-desc {
   color: darkgray;
   height: 80px;
 }
@@ -73,24 +73,26 @@ margin-top: 1px;
 
 
 body {
-  background: url(/assets/img/background/event.webp) no-repeat local  ;
+  background: url(/assets/img/background/event.webp) no-repeat local;
   background-size: cover;
   min-height: 100vh;
-  font-family: Arial, sans-serif; /* Puedes cambiar la fuente según tus preferencias */
+  font-family: Arial, sans-serif;
+  /* Puedes cambiar la fuente según tus preferencias */
   text-align: center;
 }
 
-img{
-  
+img {
+
   height: 200px;
   width: 319px;
 }
 
-.logo{
+.logo {
   margin-top: 50px;
 }
-.container {
-  
-  color: white; /* Cambia el color del texto según tus preferencias */
-}
 
+.container {
+
+  color: white;
+  /* Cambia el color del texto según tus preferencias */
+}

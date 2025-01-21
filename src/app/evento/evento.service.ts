@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Evento } from './evento';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -17,7 +18,7 @@ export class EventoService {
 
   private eventosCarrito: Evento[] = [];
 
-  constructor() {}
+  constructor() { }
 
   addCarrito(evento: Evento) {
     this.eventosCarrito = [...this.eventosCarrito, evento];
@@ -29,8 +30,8 @@ export class EventoService {
     localStorage.setItem('eventos', JSON.stringify(this.eventosCarrito));
   }
 
-  getCarrito() {
-    return JSON.parse(localStorage.getItem('eventos') || '') ?? [];
+  getCarrito(): Evento[] {
+    return JSON.parse(localStorage.getItem('eventos') || '[]');
   }
 
   getEventos(): Observable<Evento[]> {
