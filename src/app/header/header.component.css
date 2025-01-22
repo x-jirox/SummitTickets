@@ -1,3 +1,4 @@
+
 .header {
   z-index: 1000;
   /* Coloca el header por encima del contenido */
@@ -45,4 +46,8 @@
 .cart-icon-container {
   position: relative;
   display: inline-block;
+}
+
+.nav-item{
+  margin-left: 10px;
 }

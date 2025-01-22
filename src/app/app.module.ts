@@ -12,7 +12,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { UsuarioService } from './usuarios/usuario.service';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 const routes: Routes= [
@@ -35,6 +35,7 @@ const routes: Routes= [
     PedidosComponent,
     HomeComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -42,6 +43,7 @@ const routes: Routes= [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule
     
   ],
   providers: [UsuarioService],

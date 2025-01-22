@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from '../usuarios/usuario';
+
 import Swal from 'sweetalert2'; // Importa SweetAlert2
 
 @Component({
@@ -62,3 +63,4 @@ export class HeaderComponent implements OnInit {
     }
   }
 }
+

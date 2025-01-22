@@ -1,0 +1,231 @@
+/* Elimina márgenes y relleno por defecto del body */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Evita barras de desplazamiento */
+}
+
+/* Contenedor para el video */
+.video-background {
+    position: relative;
+    height: 110vh;
+    /* Ocupa toda la altura de la pantalla */
+    width: 100%;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Hace que el video cubra toda el área */
+    z-index: -1;
+    /* Coloca el video detrás del contenido */
+}
+
+.cart-title,
+.item-name,
+p,
+.item-price {
+    color: aliceblue;
+}
+
+.container {
+    padding-top: 5rem;
+}
+
+.card {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.052);
+    /* Fondo blanco translúcido */
+}
+
+.card-body {
+    padding: 2rem;
+
+}
+
+.cart-item {
+    background-color: #000000d3;
+    /* Fondo blanco para cada item */
+    border: 1px solid #000000;
+    /* Borde gris claro */
+    border-radius: 0.5rem;
+    /* Esquinas redondeadas */
+    padding: 1rem;
+    /* Espaciado interno */
+    margin-bottom: 0.5rem;
+    /* Espacio entre items */
+}
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.cart-header,
+.payment-header,
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-title,
+.payment-title {
+    font-weight: bold;
+}
+
+.cart-items,
+.sort {
+    margin: 0;
+}
+
+.cart-items-container {
+    max-height: 400px;
+    /* Ajusta según sea necesario */
+    overflow-y: auto;
+    /* Permite el scroll vertical */
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    /* Espaciado interno */
+}
+
+/* Ocultar la barra de desplazamiento en WebKit */
+.cart-items-container::-webkit-scrollbar {
+    width: 0;
+    /* Oculta la barra de desplazamiento */
+    background: transparent;
+    /* Fondo transparente */
+}
+
+
+.cart-item {
+    margin-bottom: 1rem;
+}
+
+.cart-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+}
+
+.item-image {
+    width: 65px;
+    border-radius: 0.5rem;
+}
+
+.item-info {
+    margin-left: 1rem;
+}
+
+.item-name {
+    margin: 0;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+}
+
+.item-quantity,
+.item-price {
+    width: 50px;
+}
+
+.delete-link {
+    color: #ff0707;
+}
+
+.payment-card {
+    background-color: #000000;
+    color: white;
+}
+
+
+.card-types a {
+    color: white;
+    margin-right: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.total {
+    margin-top: 2rem;
+}
+
+.total p {
+    margin: 0;
+}
+
+.checkout-button {
+    background-color: #2a3435;
+    color: white;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #2c3738;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 5rem;
+        /* Menos espacio en pantallas más pequeñas */
+    }
+
+    .video-background {
+        position: relative;
+        height: 160vh;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+        /* Menos padding en pantallas pequeñas */
+    }
+
+    .item-image {
+        width: 50px;
+        /* Imagen más pequeña en pantallas pequeñas */
+    }
+
+    .checkout-button {
+        padding: 0.75rem;
+        /* Menos padding en el botón para pantallas pequeñas */
+    }
+
+    .cart-items-container {
+        max-height: 300px;
+        /* Menor altura en pantallas pequeñas */
+    }
+}
